@@ -73,6 +73,7 @@
     --bs-link-hover-color: #830866;
     --bs-code-color: #d63384;
     --bs-highlight-bg: #fcf8e3;
+    --bs-form-text-color: #f5f7fc;
 }
 
 *,
@@ -126,6 +127,27 @@ h6,
     line-height: 1.2;
     color: var(--bs-heading-color);
 }
+
+.anime {
+
+      background-color: lightgrey;
+      transition: transform 0.7s ease, box-shadow 0.3s ease;
+}
+
+.anime:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 16px rgba(0, 0, 0, 0.3);
+
+}
+
+.form_text label {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  font-weight: bold;
+  z-index: 10;
+}
+
 
 h1,
 .h1 {
@@ -5163,7 +5185,10 @@ fieldset:disabled .btn {
 .card > hr {
     margin-right: 0;
     margin-left: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
+
 
 .card > .list-group {
     border-top: inherit;
@@ -5538,9 +5563,13 @@ fieldset:disabled .btn {
     --bs-pagination-disabled-bg: #fff;
     --bs-pagination-disabled-border-color: #dee2e6;
     display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
     padding-left: 0;
     list-style: none;
+    margin: 0;
 }
+
 
 .page-link {
     position: relative;
@@ -8974,7 +9003,7 @@ fieldset:disabled .btn {
 }
 
 .min-vh-75 {
-    min-height: 100vh !important;
+    min-height: 75vh !important;
 }
 
 .min-vh-80 {
@@ -20874,6 +20903,7 @@ fieldset:disabled .btn {
     border-radius: var(--bs-frame-border-radius)
 
 
+
 }
 
 .card .card-header {
@@ -22261,14 +22291,16 @@ hr.horizontal.gray-light {
 }
 
 .mask {
-    position: absolute;
-    background-size: cover;
-    background-position: center center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .cursor-pointer {
